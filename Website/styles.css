@@ -1,0 +1,377 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f7f7ff;
+    margin: 0;
+}
+/* Styling code for text and headings (h1, h2, p) */
+p {
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: "Poppins";
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1>span.landing {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+h1>span.donatenow {
+    font-size: 3rem;
+    text-transform: uppercase;
+    border: 3px  #FD6157 solid;
+    border-radius: 25px;
+    background-color: #f7f7ff;
+    margin: 5px 0;
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+h1>span.donatenow:hover {
+    background-color: #FD6157;
+    opacity: 50%;
+}
+
+h1>span.final {
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: "Poppins";
+    font-size: 4rem;
+    font-weight: 300;
+    text-align: center;
+}
+/* Styling code for Shoelace dropdown menu and internal elements (drawer body, header, footer, logo and buttons (about, wwf, help)) */
+.menu::part(body) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.menu::part(body) {
+    background: url("/images/wavey-up.svg") no-repeat bottom center;
+    background-size: cover;
+    margin-bottom: -10px;
+}
+
+.menu::part(header) {
+    --header-spacing: 0;
+}
+
+.menu::part(footer) {
+    background: #2690A8;
+    --footer-spacing: 0;
+}
+
+.logo {
+    max-height: 200px;
+}
+
+.about, .wwf, .help {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 1.8rem;
+    list-style: none;
+    border: 3px  #319FBC solid;
+    border-radius: 10px;
+    background-color: #f7f7ff;
+    margin: 4px 0;
+    padding: 2px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.help {
+    border: 3px  #FD6157 solid;
+}
+
+.about:hover, .wwf:hover {
+    background-color: #319FBC;
+}
+
+.help:hover {
+    background-color: #FD6157;
+}
+
+/* Styling code for hamburger menu icon */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    border: 5px solid #319FBC;
+    border-radius: 10px;
+    background-color: #f7f7ff;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 500;  
+}
+
+.hamburger:hover {
+    background-color: #79c1da;
+}
+
+.hamburger>.ham {
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #319FBC;
+}
+/* Styling code for svg page down indicator (more styling found in SVGArtista.css) */
+.pagedown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 5%;
+    right: 0.2%;
+    z-index: 500; 
+}
+
+/* Styling code for first and final (sections 1 & 8) fade in headings sections */
+.section1, .section8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 300vh;
+    background-color: #f7f7ff;
+    z-index: 2;
+}
+/* Styling code for clouds - maintaining position in relevance to other page sections and changing individual sizes */
+.cloud, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
+    position: absolute;
+    z-index: 100;
+}
+
+.cloud2 {
+    transform: scale(0.9);
+}
+
+.cloud3 {
+    transform: scale(0.7);
+}
+
+.cloud4 {
+    transform: scale(0.5);
+}
+
+.cloud5 {
+    transform: scale(0.3);
+}
+
+.clouds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+/* Styling code for first waves svg section (2) */
+.section2 {
+    background: url("/images/wavey-up.svg") no-repeat bottom center;
+    background-size: cover;
+    margin-bottom: -10px;
+}
+/* Styling code for first Australia Map svg section (zoomed out, full map, 3) */
+.section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2690A8;
+}
+/* Styling code applicable to both first and last waves svg sections (2 & 7) */
+.section2, .section7 {
+    height: 75vh
+}
+/* Styling code for next 3 Australia Map svg sections (zoomed in, Western Australia, 4)(zoomed in, Queensland, 5)(zoomed out, full map, 6) */
+.section4, .section5, .section6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #2690A8;
+}
+/* Styling code for information point containers (Shoelace dialog - points 1-6) */
+.infocontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+/* Styling code for svg Australia map containers (corresponding to sections 3 - 6) */
+.svgcontainer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0.8);
+    z-index: 2;
+}
+
+.svgcontainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.svgcontainer3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+/* Styling code for svg Australia maps that are zoomed in (corresponding to sections 4 & 5) */
+.mapwa {
+    transform: scale(2);
+    margin-left: 40%;
+    margin-bottom: 7%;
+}
+
+.mapqld {
+    transform: scale(2);
+    margin-right: 35%;
+    margin-top: 10%;
+}
+/* Styling code for Australia map information points (corresponding to information points 1 - 5) */
+.infopoint1, .infopoint2, .infopoint3, .infopoint4, .infopoint5 {
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    border: 5px solid #2690A8;
+    border-radius: 80px;
+    background-color: #f7f7ff;
+    font-size: 2rem;
+    color: #319FBC;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.infopoint1 {
+    position: absolute;
+    top: 25%;
+    left: 12%;
+}
+
+.infopoint2 {
+    position: absolute;
+    top: 12%;
+    left: 15%;
+}
+
+.infopoint3 {
+    position: absolute;
+    top: 38%;
+    left: 15%;
+}
+
+.infopoint4 {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+}
+
+.infopoint5 {
+    position: absolute;
+    top: 35%;
+    right: 20%;
+}
+
+.infopoint1:hover, .infopoint2:hover, .infopoint3:hover, .infopoint4:hover, .infopoint5:hover {
+    background-color: #79c1da;
+}
+/* Styling code for Shoelace information points and internal elements (dialog positioning, body and images (Diversity, Aus Coast, Livelihood, Barrier Reef, Employment)) */
+.info {
+    --width: 80vw;
+    --body-spacing: 100px;
+}
+
+.info::part(body) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.infoimgbox {
+    display: block;
+    position: relative;
+}
+
+.infoimgbox>img {
+    max-height: 200px;
+    max-width: 200px;
+}
+/* Styling code for last waves svg section (7) */
+.section7 {
+    background: url("/images/wavey-down.svg") no-repeat bottom center;
+    background-size: cover;
+    margin-bottom: -10px;
+}
+/* Styling code for call to action button including positioning and on hover showing clickability */
+.actioncontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 5%;
+    margin: 0 auto;
+    padding-top: 40vh;
+}
+
+.actionimg {
+    position: absolute;
+    background-color: #79c1da;
+    border-radius: 500px;
+    transition: 0.5s;
+}
+
+.actionimg:hover {
+    border-radius: 50px;
+}
+/* Final styling code to increase section 8 sizing */
+.section8 {
+    height: 400vh;
+}
+/* Styling code for image slider and contained text (other styling code attached in splide-skyblue.min.css) */
+.splide__slide img {
+    width: 50%;
+    height: auto;
+}
+
+.slidetxt {
+    text-align: center;
+}
